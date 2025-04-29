@@ -1,0 +1,18 @@
+Remove Old Config :
+openvpn3 config-remove --config MyITSVPN
+
+Import New Config :
+openvpn3 config-import --config /home/hilmi/myitsvpn-nrp@student.its.ac.id.ovpn --name MyITSVPN --persistent
+
+Adjust Settings (allow compression) :
+openvpn3 config-manage --config MyITSVPN --allow-compression yes
+
+Start VPN Session : (auth username=nrp@student.its.ac.id, auth password={passwordmyits})
+openvpn3 session-start --dco true --config MyITSVPN
+
+See Active VPN Sessions :
+openvpn3 sessions-list
+
+Disconnect VPN Session Manually :
+openvpn3 session-manage --session-path /net/openvpn/v3/sessions/{fill this} --disconnect
+
