@@ -4,7 +4,7 @@
 openvpn3 config-remove --config myITSVPN
 
 # Import New Config :
-openvpn3 config-import --config myitsvpn-{FILL_NRP}@student.its.ac.id.ovpn --name myITSVPN --persistent
+openvpn3 config-import --config myitsvpn-$1@student.its.ac.id.ovpn --name myITSVPN --persistent
 
 # Adjust Settings (allow compression) :
 openvpn3 config-manage --config myITSVPN --allow-compression yes
