@@ -32,6 +32,10 @@ sudo apt install openvpn3
 ### 2. Clone this repository
 ```bash
 git clone https://github.com/mhilmir/myITS_VPN_Connect.git
+
+# make the scripts executable
+cd myITS_VPN_Connect/
+chmod +x *.sh
 ```
 
 ### 3. Run connect.sh
@@ -39,10 +43,6 @@ git clone https://github.com/mhilmir/myITS_VPN_Connect.git
 Make sure you've been downloaded .ovpn configuration file from portal.its.ac.id then place it in this repo.
 
 ```bash
-# make the scripts executable
-cd myITS_VPN_Connect/
-chmod +x *.sh
-
 # run the script
 bash connect.sh {nrp}
 ```
@@ -59,7 +59,7 @@ password = {your myITS password}
 
 ### 1. List the current vpn sessions
 ```bash
-openvpn3 sessions-list
+bash list.sh
 ```
 Find your current session, then copy the path
 
